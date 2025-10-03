@@ -1,26 +1,163 @@
 @import "tailwindcss";
 
+/* Paleta Minimalista Profissional */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Azul Petróleo - cor de destaque única */
+  --teal-50: #f0fdfa;
+  --teal-100: #ccfbf1;
+  --teal-200: #99f6e4;
+  --teal-300: #5eead4;
+  --teal-400: #2dd4bf;
+  --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+  --teal-700: #0f766e;
+  --teal-800: #115e59;
+  --teal-900: #134e4a;
+
+  /* Cinzas sofisticados */
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Azul Petróleo */
+.bg-teal-50 {
+  background-color: var(--teal-50);
+}
+.bg-teal-100 {
+  background-color: var(--teal-100);
+}
+.bg-teal-200 {
+  background-color: var(--teal-200);
+}
+.bg-teal-300 {
+  background-color: var(--teal-300);
+}
+.bg-teal-400 {
+  background-color: var(--teal-400);
+}
+.bg-teal-500 {
+  background-color: var(--teal-500);
+}
+.bg-teal-600 {
+  background-color: var(--teal-600);
+}
+.bg-teal-700 {
+  background-color: var(--teal-700);
+}
+.bg-teal-800 {
+  background-color: var(--teal-800);
+}
+.bg-teal-900 {
+  background-color: var(--teal-900);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.text-teal-50 {
+  color: var(--teal-50);
+}
+.text-teal-100 {
+  color: var(--teal-100);
+}
+.text-teal-200 {
+  color: var(--teal-200);
+}
+.text-teal-300 {
+  color: var(--teal-300);
+}
+.text-teal-400 {
+  color: var(--teal-400);
+}
+.text-teal-500 {
+  color: var(--teal-500);
+}
+.text-teal-600 {
+  color: var(--teal-600);
+}
+.text-teal-700 {
+  color: var(--teal-700);
+}
+.text-teal-800 {
+  color: var(--teal-800);
+}
+.text-teal-900 {
+  color: var(--teal-900);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.from-teal-50 {
+  --tw-gradient-from: var(--teal-50);
+}
+.from-teal-100 {
+  --tw-gradient-from: var(--teal-100);
+}
+.from-teal-200 {
+  --tw-gradient-from: var(--teal-200);
+}
+.from-teal-300 {
+  --tw-gradient-from: var(--teal-300);
+}
+.from-teal-400 {
+  --tw-gradient-from: var(--teal-400);
+}
+.from-teal-500 {
+  --tw-gradient-from: var(--teal-500);
+}
+.from-teal-600 {
+  --tw-gradient-from: var(--teal-600);
+}
+.from-teal-700 {
+  --tw-gradient-from: var(--teal-700);
+}
+.from-teal-800 {
+  --tw-gradient-from: var(--teal-800);
+}
+.from-teal-900 {
+  --tw-gradient-from: var(--teal-900);
+}
+
+.to-teal-50 {
+  --tw-gradient-to: var(--teal-50);
+}
+.to-teal-100 {
+  --tw-gradient-to: var(--teal-100);
+}
+.to-teal-200 {
+  --tw-gradient-to: var(--teal-200);
+}
+.to-teal-300 {
+  --tw-gradient-to: var(--teal-300);
+}
+.to-teal-400 {
+  --tw-gradient-to: var(--teal-400);
+}
+.to-teal-500 {
+  --tw-gradient-to: var(--teal-500);
+}
+.to-teal-600 {
+  --tw-gradient-to: var(--teal-600);
+}
+.to-teal-700 {
+  --tw-gradient-to: var(--teal-700);
+}
+.to-teal-800 {
+  --tw-gradient-to: var(--teal-800);
+}
+.to-teal-900 {
+  --tw-gradient-to: var(--teal-900);
+}
+
+/* Estilos minimalistas adicionais */
+.minimal-shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.minimal-shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
