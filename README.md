@@ -1,18 +1,19 @@
-# Template Store - Website Templates Marketplace
+# Portfolio - Web Development Services
 
 ## 🇧🇷 Português (Brasil)
 
-Este é um projeto de marketplace para venda de templates de websites desenvolvido com [Next.js](https://nextjs.org). O site oferece uma variedade de templates profissionais, desde landing pages até e-commerce completos, para desenvolvedores e empresas que buscam soluções prontas e personalizáveis.
+Este é um projeto de portfólio profissional para serviços de desenvolvimento web desenvolvido com [Next.js](https://nextjs.org). O site apresenta os serviços de criação de websites personalizados, desde landing pages até e-commerce completos, para empresas que buscam soluções web profissionais e sob medida.
 
 ### 🚀 Sobre o Projeto
 
-Este marketplace foi criado para conectar desenvolvedores de templates com clientes que precisam de soluções web rápidas e profissionais. Oferecemos:
+Este portfólio foi criado para apresentar os serviços de desenvolvimento web personalizado. Oferecemos:
 
-- **Landing Pages**: Templates otimizados para conversão
-- **E-commerce**: Soluções completas para lojas online
-- **Portfolios**: Templates para profissionais criativos
-- **Blogs**: Templates para conteúdo e marketing
-- **Dashboards**: Interfaces administrativas modernas
+- **Websites Corporativos**: Sites institucionais e empresariais
+- **Landing Pages**: Páginas otimizadas para conversão
+- **E-commerce**: Lojas virtuais completas e funcionais
+- **Portfolios**: Sites para profissionais criativos
+- **Blogs**: Plataformas de conteúdo e marketing
+- **Dashboards**: Interfaces administrativas personalizadas
 
 ### 🛠️ Tecnologias Utilizadas
 
@@ -58,17 +59,17 @@ src/
 │   ├── hero/           # Seção principal
 │   ├── methodology/    # Metodologia
 │   ├── navbar/         # Navegação
-│   ├── portfolio/      # Portfólio de templates
+│   ├── portfolio/      # Portfólio de projetos
 │   └── services/       # Serviços oferecidos
 ```
 
 ### 🎨 Funcionalidades
 
-- **Catálogo de Templates**: Visualização e filtros de templates
-- **Preview Interativo**: Demonstração ao vivo dos templates
-- **Sistema de Pagamento**: Integração com gateways de pagamento
-- **Download Instantâneo**: Acesso imediato após compra
-- **Suporte ao Cliente**: Sistema de tickets e FAQ
+- **Portfólio de Projetos**: Galeria com trabalhos realizados
+- **Demonstrações Interativas**: Preview dos sites desenvolvidos
+- **Sistema de Contato**: Formulários para solicitação de orçamentos
+- **Apresentação de Serviços**: Detalhamento das soluções oferecidas
+- **Suporte ao Cliente**: Atendimento personalizado e consultoria
 
 ### 🚀 Deploy
 
@@ -88,17 +89,18 @@ Contribuições são bem-vindas! Por favor, abra uma issue ou pull request para 
 
 ## 🇺🇸 English (US)
 
-This is a marketplace project for selling website templates built with [Next.js](https://nextjs.org). The site offers a variety of professional templates, from landing pages to complete e-commerce solutions, for developers and companies seeking ready-made and customizable solutions.
+This is a professional portfolio project for web development services built with [Next.js](https://nextjs.org). The site showcases custom website development services, from landing pages to complete e-commerce solutions, for companies seeking professional and tailored web solutions.
 
 ### 🚀 About the Project
 
-This marketplace was created to connect template developers with clients who need fast and professional web solutions. We offer:
+This portfolio was created to present custom web development services. We offer:
 
-- **Landing Pages**: Conversion-optimized templates
-- **E-commerce**: Complete solutions for online stores
-- **Portfolios**: Templates for creative professionals
-- **Blogs**: Templates for content and marketing
-- **Dashboards**: Modern administrative interfaces
+- **Corporate Websites**: Institutional and business websites
+- **Landing Pages**: Conversion-optimized pages
+- **E-commerce**: Complete and functional online stores
+- **Portfolios**: Websites for creative professionals
+- **Blogs**: Content and marketing platforms
+- **Dashboards**: Custom administrative interfaces
 
 ### 🛠️ Technologies Used
 
@@ -144,17 +146,17 @@ src/
 │   ├── hero/           # Main section
 │   ├── methodology/    # Methodology
 │   ├── navbar/         # Navigation
-│   ├── portfolio/      # Template portfolio
+│   ├── portfolio/      # Project portfolio
 │   └── services/       # Services offered
 ```
 
 ### 🎨 Features
 
-- **Template Catalog**: Template visualization and filters
-- **Interactive Preview**: Live template demonstrations
-- **Payment System**: Integration with payment gateways
-- **Instant Download**: Immediate access after purchase
-- **Customer Support**: Ticket system and FAQ
+- **Project Portfolio**: Gallery with completed works
+- **Interactive Demonstrations**: Preview of developed websites
+- **Contact System**: Forms for quote requests
+- **Services Presentation**: Detailed solutions offered
+- **Customer Support**: Personalized service and consulting
 
 ### 🚀 Deploy
 
@@ -172,4 +174,4 @@ Contributions are welcome! Please open an issue or pull request to suggest impro
 
 ---
 
-**Template Store** - Transforming ideas into digital reality.
+**Portfolio** - Transforming ideas into digital reality.
