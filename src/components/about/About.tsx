@@ -28,55 +28,57 @@ export default function About() {
               <div className="space-y-4">
                 <div className="inline-flex items-center px-3 py-1 rounded-full bg-cyan-50 text-cyan-600 text-sm font-medium">
                   <div className="w-2 h-2 bg-cyan-500 rounded-full mr-2"></div>
-                  Cupcake ipsum dolor sit amet
+                  Sobre Nossa Equipe
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">
-                    Powder jelly beans chupa chups
+                    Equipe Especializada em Desenvolvimento Web
                   </span>
                 </h2>
                 <p className="text-lg text-slate-600 leading-relaxed">
-                  Chocolate. Lemon drops candy powder brownie candy canes
-                  fruitcake. Topping pastry lollipop liquorice cake shortbread
-                  cupcake macaroon.
+                  Somos uma equipe pequena e especializada, focada em criar
+                  soluções digitais que realmente funcionam para o seu negócio.
+                  Cada projeto é desenvolvido com atenção aos detalhes e foco em
+                  resultados.
                 </p>
               </div>
 
               {/* Description */}
               <div className="space-y-4 text-slate-700">
                 <p>
-                  Caramels cotton candy croissant bear claw jelly beans. Sweet
-                  soufflé halvah dessert cotton candy carrot cake. Sugar plum
-                  sugar plum liquorice cake pudding sugar plum tart.
+                  Nossa equipe é formada por desenvolvedores especializados em
+                  tecnologias modernas como Next.js, React e TypeScript.
+                  Trabalhamos de forma colaborativa para entregar projetos que
+                  superam as expectativas dos nossos clientes.
                 </p>
                 <p>
-                  Bear claw icing marshmallow macaroon macaroon chocolate bar
-                  tootsie roll icing. Candy canes gingerbread cake pudding cake
-                  candy canes apple pie cupcake cake.
+                  Cada membro da equipe traz uma expertise única, permitindo que
+                  ofereçamos soluções completas desde o design até a
+                  implementação e manutenção dos projetos. Acreditamos que o
+                  trabalho em equipe gera resultados excepcionais.
                 </p>
                 <p>
-                  Danish lollipop ice cream biscuit tiramisu. Dessert
-                  gingerbread gummi bears fruitcake jelly beans brownie soufflé.
-                  Cheesecake bear claw chocolate bar lemon drops soufflé tart
-                  pie halvah.
+                  Nosso diferencial está na atenção aos detalhes, comunicação
+                  transparente e compromisso com a entrega de projetos que
+                  realmente agregam valor ao negócio dos nossos clientes.
                 </p>
               </div>
 
               {/* Skills */}
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-slate-900">
-                  Cupcake ipsum dolor sit amet:
+                  Tecnologias que dominamos:
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "Powder jelly beans",
-                    "Chupa chups chocolate",
-                    "Lemon drops candy",
-                    "Brownie candy canes",
-                    "Fruitcake topping",
-                    "Pastry lollipop",
-                    "Liquorice cake",
-                    "Shortbread cupcake",
+                    "Next.js",
+                    "React",
+                    "TypeScript",
+                    "JavaScript",
+                    "Tailwind CSS",
+                    "Node.js",
+                    "Git",
+                    "Figma",
                   ].map((tech) => (
                     <span
                       key={tech}
@@ -94,7 +96,7 @@ export default function About() {
                   href="#contato"
                   className="group inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
                 >
-                  Cupcake ipsum dolor sit amet
+                  Vamos trabalhar juntos
                   <svg
                     className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform"
                     fill="none"
@@ -166,10 +168,10 @@ export default function About() {
                     </div>
                     <div>
                       <div className="text-sm font-semibold text-slate-900">
-                        Cupcake ipsum
+                        Equipe Pequena
                       </div>
                       <div className="text-xs text-slate-500">
-                        Dolor sit amet
+                        Grande Resultado
                       </div>
                     </div>
                   </div>
@@ -188,10 +190,10 @@ export default function About() {
                     </div>
                     <div>
                       <div className="text-sm font-semibold text-slate-900">
-                        Powder jelly
+                        Especialistas
                       </div>
                       <div className="text-xs text-slate-500">
-                        Beans chupa chups
+                        em Tecnologia
                       </div>
                     </div>
                   </div>

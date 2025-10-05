@@ -13,16 +13,16 @@ export default function Services() {
 
   const services = [
     {
-      title: "Cupcake Ipsum Dolor",
+      title: "Sites Institucionais",
       description:
-        "Caramels cotton candy croissant bear claw jelly beans. Sweet soufflé halvah dessert cotton candy carrot cake.",
+        "Sites profissionais e modernos para empresas que querem se destacar no mercado digital. Desenvolvidos com foco em credibilidade e conversão.",
       features: [
-        "Sugar plum sugar plum",
-        "Liquorice cake pudding",
-        "Sugar plum tart",
-        "Bear claw icing",
+        "Design responsivo e moderno",
+        "SEO otimizado para Google",
+        "Velocidade de carregamento otimizada",
+        "Suporte técnico completo",
       ],
-      price: "Cupcake ipsum",
+      price: "A partir de R$",
       icon: (
         <svg
           className="w-8 h-8"
@@ -41,16 +41,16 @@ export default function Services() {
       color: "from-cyan-500 to-blue-500",
     },
     {
-      title: "Marshmallow Macaroon",
+      title: "Landing Pages",
       description:
-        "Chocolate bar tootsie roll icing. Candy canes gingerbread cake pudding cake candy canes apple pie cupcake cake.",
+        "Páginas de alta conversão focadas em transformar visitantes em clientes. Desenvolvidas com estratégias de conversão comprovadas.",
       features: [
-        "Danish lollipop ice cream",
-        "Biscuit tiramisu",
-        "Dessert gingerbread gummi",
-        "Bears fruitcake jelly",
+        "Design persuasivo e otimizado",
+        "Formulários de captura estratégicos",
+        "Analytics e tracking integrado",
+        "A/B Testing para otimização",
       ],
-      price: "Beans brownie soufflé",
+      price: "A partir de R$",
       icon: (
         <svg
           className="w-8 h-8"
@@ -69,16 +69,16 @@ export default function Services() {
       color: "from-blue-500 to-purple-500",
     },
     {
-      title: "Cheesecake Bear Claw",
+      title: "E-commerce",
       description:
-        "Chocolate bar lemon drops soufflé tart pie halvah. Tiramisu lemon drops bonbon caramels wafer.",
+        "Lojas virtuais completas com sistema de pagamento, gestão de estoque e painel administrativo. Tudo que você precisa para vender online.",
       features: [
-        "Biscuit soufflé soufflé",
-        "Lollipop shortbread candy",
-        "Canes chocolate cake",
-        "Chupa chups gummies",
+        "Sistema de pagamento seguro",
+        "Gestão completa de produtos",
+        "Painel administrativo intuitivo",
+        "Relatórios de vendas detalhados",
       ],
-      price: "Sweet pie cookie",
+      price: "A partir de R$",
       icon: (
         <svg
           className="w-8 h-8"
@@ -115,17 +115,17 @@ export default function Services() {
           >
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-cyan-50 text-cyan-600 text-sm font-medium mb-6">
               <div className="w-2 h-2 bg-cyan-500 rounded-full mr-2"></div>
-              Cupcake ipsum dolor sit amet
+              Nossos Serviços
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">
-                Powder jelly beans chupa chups
+                Soluções Digitais Completas
               </span>
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Chocolate. Lemon drops candy powder brownie candy canes fruitcake.
-              Topping pastry lollipop liquorice cake shortbread cupcake
-              macaroon.
+              Oferecemos serviços especializados em desenvolvimento web, desde
+              sites institucionais até e-commerce completos. Cada projeto é
+              desenvolvido com foco em resultados e performance.
             </p>
           </div>
 

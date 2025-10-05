@@ -14,14 +14,14 @@ export default function Methodology() {
   const steps = [
     {
       number: "01",
-      title: "Cupcake Ipsum Dolor",
+      title: "Análise & Planejamento",
       description:
-        "Caramels cotton candy croissant bear claw jelly beans. Sweet soufflé halvah dessert cotton candy carrot cake. Sugar plum sugar plum liquorice cake pudding sugar plum tart.",
+        "Entendemos seu negócio, objetivos e público-alvo para criar uma estratégia digital personalizada. Definimos escopo, cronograma e tecnologias ideais.",
       features: [
-        "Bear claw icing marshmallow",
-        "Macaroon chocolate bar",
-        "Tootsie roll icing",
-        "Candy canes gingerbread",
+        "Briefing detalhado do projeto",
+        "Análise da concorrência",
+        "Definição de objetivos claros",
+        "Cronograma de desenvolvimento",
       ],
       icon: (
         <svg
@@ -42,14 +42,14 @@ export default function Methodology() {
     },
     {
       number: "02",
-      title: "Cake Pudding Cake",
+      title: "Design & Prototipagem",
       description:
-        "Candy canes apple pie cupcake cake. Danish lollipop ice cream biscuit tiramisu. Dessert gingerbread gummi bears fruitcake jelly beans brownie soufflé.",
+        "Criamos layouts modernos e funcionais, focados na experiência do usuário e conversão. Desenvolvemos wireframes e protótipos interativos.",
       features: [
-        "Cheesecake bear claw",
-        "Chocolate bar lemon",
-        "Drops soufflé tart",
-        "Pie halvah tiramisu",
+        "Wireframes e estrutura",
+        "Design visual moderno",
+        "Prototipagem interativa",
+        "Testes de usabilidade",
       ],
       icon: (
         <svg
@@ -70,14 +70,14 @@ export default function Methodology() {
     },
     {
       number: "03",
-      title: "Lemon Drops Bonbon",
+      title: "Desenvolvimento",
       description:
-        "Caramels wafer. Biscuit soufflé soufflé lollipop shortbread candy canes. Chocolate cake chupa chups gummies sweet pie. Cookie oat cake soufflé carrot cake.",
+        "Transformamos o design em código limpo, otimizado e responsivo usando as melhores tecnologias. Cada linha de código é pensada para performance.",
       features: [
-        "Cake pastry chocolate",
-        "Chupa chups wafer",
-        "Macaroon lemon drops",
-        "Gingerbread chupa chups",
+        "Código limpo e escalável",
+        "Responsividade total",
+        "Performance otimizada",
+        "SEO integrado",
       ],
       icon: (
         <svg
@@ -98,14 +98,14 @@ export default function Methodology() {
     },
     {
       number: "04",
-      title: "Chocolate Bar Biscuit",
+      title: "Entrega & Suporte",
       description:
-        "Marshmallow pastry marzipan chupa chups pie cheesecake. Pie shortbread lollipop candy canes marshmallow sugar plum candy. Cupcake ipsum dolor sit amet powder jelly beans chupa chups chocolate.",
+        "Fazemos a entrega do projeto e oferecemos suporte contínuo para garantir o sucesso. Incluímos treinamento e documentação completa.",
       features: [
-        "Lemon drops candy powder",
-        "Brownie candy canes",
-        "Fruitcake topping pastry",
-        "Lollipop liquorice cake",
+        "Testes finais e validação",
+        "Treinamento da equipe",
+        "Suporte técnico contínuo",
+        "Manutenção e atualizações",
       ],
       icon: (
         <svg
@@ -143,17 +143,17 @@ export default function Methodology() {
           >
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-cyan-50 text-cyan-600 text-sm font-medium mb-6">
               <div className="w-2 h-2 bg-cyan-500 rounded-full mr-2"></div>
-              Cupcake ipsum dolor sit amet
+              Nossa Metodologia
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">
-                Powder jelly beans chupa chups
+                Processo de Desenvolvimento
               </span>
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Chocolate. Lemon drops candy powder brownie candy canes fruitcake.
-              Topping pastry lollipop liquorice cake shortbread cupcake
-              macaroon.
+              Seguimos um processo estruturado e comprovado para garantir que
+              cada projeto seja entregue com qualidade, no prazo e dentro do
+              orçamento.
             </p>
           </div>
 
@@ -244,14 +244,14 @@ export default function Methodology() {
                 Pronto para começar seu projeto?
               </h3>
               <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-                Vamos aplicar nossa metodologia comprovada para criar um projeto
-                que gere resultados reais para o seu negócio.
+                Vamos aplicar nossa metodologia estruturada para criar um
+                projeto que gere resultados reais para o seu negócio.
               </p>
               <Link
                 href="#contato"
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
-                Começar Projeto
+                Solicitar Orçamento
                 <svg
                   className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"
                   fill="none"

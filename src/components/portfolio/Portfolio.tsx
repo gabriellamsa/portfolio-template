@@ -13,53 +13,32 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: "Cupcake Ipsum Dolor",
-      category: "Cupcake",
+      title: "Projeto em Desenvolvimento",
+      category: "Em Breve",
       description:
-        "Caramels cotton candy croissant bear claw jelly beans. Sweet soufflé halvah dessert cotton candy carrot cake. Sugar plum sugar plum liquorice cake pudding sugar plum tart.",
-      technologies: [
-        "Bear claw icing",
-        "Marshmallow macaroon",
-        "Chocolate bar",
-        "Tootsie roll",
-      ],
-      results: [
-        "Candy canes gingerbread",
-        "Cake pudding cake",
-        "Apple pie cupcake",
-      ],
+        "Este é um projeto que estou desenvolvendo para demonstrar minhas habilidades em desenvolvimento web. Em breve você poderá ver o resultado final aqui.",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      results: ["Design responsivo", "Performance otimizada", "Código limpo"],
       link: "#",
       color: "from-purple-500 to-pink-500",
     },
     {
-      title: "Danish Lollipop Ice Cream",
-      category: "Danish",
+      title: "Projeto em Desenvolvimento",
+      category: "Em Breve",
       description:
-        "Biscuit tiramisu. Dessert gingerbread gummi bears fruitcake jelly beans brownie soufflé. Cheesecake bear claw chocolate bar lemon drops soufflé tart pie halvah.",
-      technologies: [
-        "Tiramisu lemon drops",
-        "Bonbon caramels",
-        "Wafer biscuit",
-      ],
-      results: [
-        "Soufflé lollipop",
-        "Shortbread candy canes",
-        "Chocolate cake chupa",
-      ],
+        "Outro projeto que estou criando para expandir meu portfólio e demonstrar diferentes abordagens de desenvolvimento web moderno.",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      results: ["Design moderno", "SEO otimizado", "Acessibilidade"],
       link: "#",
       color: "from-cyan-500 to-blue-500",
     },
     {
-      title: "Chups Gummies Sweet Pie",
-      category: "Chups",
+      title: "Projeto em Desenvolvimento",
+      category: "Em Breve",
       description:
-        "Cookie oat cake soufflé carrot cake. Cake pastry chocolate chupa chups wafer macaroon lemon drops gingerbread chupa chups. Chocolate bar biscuit marshmallow pastry marzipan chupa chups pie cheesecake.",
-      technologies: [
-        "Pie shortbread lollipop",
-        "Candy canes marshmallow",
-        "Sugar plum candy",
-      ],
-      results: ["Cupcake ipsum dolor", "Sit amet powder", "Jelly beans chupa"],
+        "Mais um projeto que estou desenvolvendo para mostrar diferentes aspectos do meu trabalho e as tecnologias que domino.",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+      results: ["Interface intuitiva", "Código escalável", "Manutenção fácil"],
       link: "#",
       color: "from-blue-500 to-purple-500",
     },
@@ -79,17 +58,17 @@ export default function Portfolio() {
           >
             <div className="inline-flex items-center px-3 py-1 rounded-full bg-cyan-50 text-cyan-600 text-sm font-medium mb-6">
               <div className="w-2 h-2 bg-cyan-500 rounded-full mr-2"></div>
-              Cupcake ipsum dolor sit amet
+              Meu Portfólio
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">
-                Powder jelly beans chupa chups
+                Projetos em Desenvolvimento
               </span>
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Chocolate. Lemon drops candy powder brownie candy canes fruitcake.
-              Topping pastry lollipop liquorice cake shortbread cupcake
-              macaroon.
+              Aqui você encontrará alguns dos projetos que estou desenvolvendo.
+              Cada projeto é uma oportunidade de aprender e aplicar novas
+              tecnologias para criar soluções digitais inovadoras.
             </p>
           </div>
 
@@ -223,17 +202,17 @@ export default function Portfolio() {
           >
             <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-8 text-white shadow-2xl">
               <h3 className="text-2xl font-bold mb-4">
-                Quer ser o próximo case de sucesso?
+                Quer trabalhar comigo?
               </h3>
               <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-                Vamos trabalhar juntos para criar um projeto que gere resultados
-                reais para o seu negócio.
+                Vamos criar algo incrível juntos. Entre em contato e vamos
+                discutir como posso ajudar a transformar sua ideia em realidade.
               </p>
               <Link
                 href="#contato"
                 className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
-                Começar Projeto
+                Solicitar Orçamento
                 <svg
                   className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"
                   fill="none"

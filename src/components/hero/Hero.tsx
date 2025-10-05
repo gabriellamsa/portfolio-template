@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      <div className="relative z-10 container mx-auto px-4 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
           {/* Content */}
           <div
@@ -34,25 +34,25 @@ export default function Hero() {
             {/* Badge */}
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium">
               <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></div>
-              Cupcake ipsum dolor sit amet
+              Desenvolvimento Web Estratégico
             </div>
 
             {/* Main Headline */}
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                  Cupcake ipsum dolor sit amet
+                  Sites que Vendem, Não Apenas Impressionam
                 </span>
               </h1>
               <p className="text-xl text-slate-300 leading-relaxed max-w-lg">
-                Powder jelly beans chupa chups chocolate. Lemon drops candy
-                powder brownie candy canes fruitcake. Topping pastry lollipop
-                liquorice cake shortbread cupcake macaroon.
+                Não somos mais uma agência de sites. Somos especialistas em
+                criar soluções digitais que transformam visitantes em clientes e
+                geram resultados reais para seu negócio.
               </p>
               <p className="text-lg text-slate-400 leading-relaxed max-w-lg">
-                Caramels cotton candy croissant bear claw jelly beans. Sweet
-                soufflé halvah dessert cotton candy carrot cake. Sugar plum
-                sugar plum liquorice cake pudding sugar plum tart.
+                Cada projeto é pensado estrategicamente para converter
+                visitantes em clientes e aumentar suas vendas de forma
+                mensurável.
               </p>
             </div>
 
@@ -62,7 +62,7 @@ export default function Hero() {
                 href="#contato"
                 className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
               >
-                <span>Começar Projeto</span>
+                <span>Solicitar Orçamento</span>
                 <svg
                   className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"
                   fill="none"
@@ -81,24 +81,8 @@ export default function Hero() {
                 href="#portfolio"
                 className="inline-flex items-center px-8 py-4 border border-slate-600 hover:border-cyan-400 text-slate-300 hover:text-cyan-400 font-semibold rounded-xl transition-all duration-300"
               >
-                Ver Portfólio
+                Projetos
               </Link>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 pt-8">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">Cupcake</div>
-                <div className="text-sm text-slate-400">Ipsum</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">Dolor</div>
-                <div className="text-sm text-slate-400">Sit</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-white">Amet</div>
-                <div className="text-sm text-slate-400">Powder</div>
-              </div>
             </div>
           </div>
 
