@@ -15,7 +15,7 @@ export default function Services() {
     {
       title: "Sites Institucionais",
       description:
-        "Sites profissionais e modernos para empresas que querem se destacar no mercado digital. Desenvolvidos com foco em credibilidade e conversão.",
+        "Criação de websites profissionais e modernos para empresas que buscam presença online impactante e credibilidade no mercado.",
       features: [
         "Design responsivo e moderno",
         "SEO otimizado para Google",
@@ -23,27 +23,11 @@ export default function Services() {
         "Suporte técnico completo",
       ],
       price: "A partir de R$",
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-          />
-        </svg>
-      ),
-      color: "from-cyan-500 to-blue-500",
     },
     {
       title: "Landing Pages",
       description:
-        "Páginas de alta conversão focadas em transformar visitantes em clientes. Desenvolvidas com estratégias de conversão comprovadas.",
+        "Desenvolvimento de landing pages de alta conversão, focadas em capturar leads e impulsionar suas campanhas de marketing digital.",
       features: [
         "Design persuasivo e otimizado",
         "Formulários de captura estratégicos",
@@ -51,27 +35,11 @@ export default function Services() {
         "A/B Testing para otimização",
       ],
       price: "A partir de R$",
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M13 10V3L4 14h7v7l9-11h-7z"
-          />
-        </svg>
-      ),
-      color: "from-blue-500 to-purple-500",
     },
     {
       title: "E-commerce",
       description:
-        "Lojas virtuais completas com sistema de pagamento, gestão de estoque e painel administrativo. Tudo que você precisa para vender online.",
+        "Criação de lojas virtuais completas e seguras, com todas as funcionalidades necessárias para você vender seus produtos online.",
       features: [
         "Sistema de pagamento seguro",
         "Gestão completa de produtos",
@@ -79,116 +47,70 @@ export default function Services() {
         "Relatórios de vendas detalhados",
       ],
       price: "A partir de R$",
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01"
-          />
-        </svg>
-      ),
-      color: "from-purple-500 to-pink-500",
     },
   ];
 
   return (
-    <section
-      id="servicos"
-      className="py-20 bg-slate-50 relative overflow-hidden"
-    >
+    <section id="servicos" className="py-32 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div
-            className={`text-center mb-16 transform transition-all duration-1000 ${
+            className={`text-center mb-20 transform transition-all duration-1000 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-10 opacity-0"
             }`}
           >
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-cyan-50 text-cyan-600 text-sm font-medium mb-6">
-              <div className="w-2 h-2 bg-cyan-500 rounded-full mr-2"></div>
+            <h2 className="text-6xl font-thin text-black mb-6">
               Nossos Serviços
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">
-                Soluções Digitais Completas
-              </span>
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Oferecemos serviços especializados em desenvolvimento web, desde
-              sites institucionais até e-commerce completos. Cada projeto é
-              desenvolvido com foco em resultados e performance.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Oferecemos soluções digitais personalizadas para impulsionar o seu
+              negócio
             </p>
           </div>
 
           {/* Services Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-8 mb-20">
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 transform transition-all duration-1000 delay-${
+                className={`transform transition-all duration-1000 delay-${
                   (index + 1) * 200
                 } ${
                   isVisible
                     ? "translate-y-0 opacity-100"
-                    : "translate-y-10 opacity-0"
+                    : "translate-y-20 opacity-0"
                 }`}
               >
-                {/* Icon */}
-                <div
-                  className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}
-                >
-                  {service.icon}
-                </div>
-
-                {/* Content */}
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold text-slate-900">
+                <div className="bg-white p-8 h-full hover:shadow-lg transition-shadow duration-300">
+                  <h3 className="text-2xl font-light text-black mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed">
                     {service.description}
                   </p>
 
-                  {/* Features */}
-                  <ul className="space-y-2">
+                  <ul className="space-y-3 mb-8">
                     {service.features.map((feature, featureIndex) => (
                       <li
                         key={featureIndex}
-                        className="flex items-center text-sm text-slate-600"
+                        className="flex items-center text-gray-600"
                       >
-                        <svg
-                          className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                        <div className="w-2 h-2 bg-black rounded-full mr-3 flex-shrink-0"></div>
                         {feature}
                       </li>
                     ))}
                   </ul>
 
-                  {/* Price */}
-                  <div className="pt-4 border-t border-slate-100">
-                    <div className="text-2xl font-bold text-slate-900 mb-4">
+                  <div className="border-t border-gray-200 pt-6">
+                    <p className="text-2xl font-light text-black mb-4">
                       {service.price}
-                    </div>
+                    </p>
                     <Link
                       href="#contato"
-                      className={`block w-full bg-gradient-to-r ${service.color} text-white text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25`}
+                      className="block w-full text-center bg-black text-white py-3 px-6 hover:bg-gray-800 transition-colors duration-300"
                     >
                       Solicitar Orçamento
                     </Link>
@@ -200,38 +122,24 @@ export default function Services() {
 
           {/* CTA Section */}
           <div
-            className={`text-center transform transition-all duration-1000 delay-800 ${
+            className={`text-center transform transition-all duration-1000 delay-1000 ${
               isVisible
                 ? "translate-y-0 opacity-100"
-                : "translate-y-10 opacity-0"
+                : "translate-y-20 opacity-0"
             }`}
           >
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-200">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">
+            <div className="bg-black text-white p-16">
+              <h3 className="text-4xl font-light mb-6">
                 Não encontrou o que procura?
               </h3>
-              <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-                Entre em contato conosco e vamos criar uma solução personalizada
-                para o seu negócio.
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Entre em contato para uma solução personalizada
               </p>
               <Link
                 href="#contato"
-                className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                className="inline-block px-8 py-4 bg-white text-black font-medium hover:bg-gray-100 transition-colors duration-300"
               >
                 Falar com Especialista
-                <svg
-                  className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
               </Link>
             </div>
           </div>

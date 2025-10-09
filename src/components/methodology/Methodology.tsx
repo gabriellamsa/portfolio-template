@@ -16,215 +16,75 @@ export default function Methodology() {
       number: "01",
       title: "Análise & Planejamento",
       description:
-        "Entendemos seu negócio, objetivos e público-alvo para criar uma estratégia digital personalizada. Definimos escopo, cronograma e tecnologias ideais.",
-      features: [
-        "Briefing detalhado do projeto",
-        "Análise da concorrência",
-        "Definição de objetivos claros",
-        "Cronograma de desenvolvimento",
-      ],
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-          />
-        </svg>
-      ),
-      color: "from-cyan-500 to-blue-500",
+        "Entendemos profundamente o seu negócio, seus objetivos e o público-alvo para criar uma estratégia digital sólida e personalizada.",
     },
     {
       number: "02",
       title: "Design & Prototipagem",
       description:
-        "Criamos layouts modernos e funcionais, focados na experiência do usuário e conversão. Desenvolvemos wireframes e protótipos interativos.",
-      features: [
-        "Wireframes e estrutura",
-        "Design visual moderno",
-        "Prototipagem interativa",
-        "Testes de usabilidade",
-      ],
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"
-          />
-        </svg>
-      ),
-      color: "from-blue-500 to-purple-500",
+        "Transformamos a estratégia em layouts visuais modernos e intuitivos, garantindo uma experiência de usuário excepcional.",
     },
     {
       number: "03",
       title: "Desenvolvimento",
       description:
-        "Transformamos o design em código limpo, otimizado e responsivo usando as melhores tecnologias. Cada linha de código é pensada para performance.",
-      features: [
-        "Código limpo e escalável",
-        "Responsividade total",
-        "Performance otimizada",
-        "SEO integrado",
-      ],
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-          />
-        </svg>
-      ),
-      color: "from-purple-500 to-pink-500",
+        "Convertemos o design aprovado em código limpo, robusto e otimizado, utilizando as tecnologias mais modernas do mercado.",
     },
     {
       number: "04",
       title: "Entrega & Suporte",
       description:
-        "Fazemos a entrega do projeto e oferecemos suporte contínuo para garantir o sucesso. Incluímos treinamento e documentação completa.",
-      features: [
-        "Testes finais e validação",
-        "Treinamento da equipe",
-        "Suporte técnico contínuo",
-        "Manutenção e atualizações",
-      ],
-      icon: (
-        <svg
-          className="w-8 h-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
-      color: "from-pink-500 to-red-500",
+        "Após a aprovação final, lançamos seu projeto e oferecemos suporte contínuo para garantir o sucesso e a evolução da sua presença digital.",
     },
   ];
 
   return (
-    <section
-      id="metodologia"
-      className="py-20 bg-slate-50 relative overflow-hidden"
-    >
+    <section id="metodologia" className="py-32 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div
-            className={`text-center mb-16 transform transition-all duration-1000 ${
+            className={`text-center mb-20 transform transition-all duration-1000 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-10 opacity-0"
             }`}
           >
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-cyan-50 text-cyan-600 text-sm font-medium mb-6">
-              <div className="w-2 h-2 bg-cyan-500 rounded-full mr-2"></div>
+            <h2 className="text-6xl font-thin text-black mb-6">
               Nossa Metodologia
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">
-                Processo de Desenvolvimento
-              </span>
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Seguimos um processo estruturado e comprovado para garantir que
-              cada projeto seja entregue com qualidade, no prazo e dentro do
-              orçamento.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Um processo transparente e eficiente para garantir o sucesso do
+              seu projeto
             </p>
           </div>
 
           {/* Steps */}
-          <div className="space-y-12 mb-16">
+          <div className="space-y-16">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className={`grid md:grid-cols-2 gap-8 items-center transform transition-all duration-1000 delay-${
+                className={`transform transition-all duration-1000 delay-${
                   (index + 1) * 200
                 } ${
                   isVisible
                     ? "translate-y-0 opacity-100"
-                    : "translate-y-10 opacity-0"
+                    : "translate-y-20 opacity-0"
                 }`}
               >
-                {/* Content */}
-                <div
-                  className={`space-y-6 ${index % 2 === 1 ? "md:order-2" : ""}`}
-                >
-                  <div className="flex items-center space-x-4">
-                    <div
-                      className={`w-16 h-16 bg-gradient-to-r ${step.color} rounded-2xl flex items-center justify-center text-white font-bold text-xl shadow-lg`}
-                    >
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 mr-8">
+                    <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center text-2xl font-light">
                       {step.number}
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900">
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-3xl font-light text-black mb-4">
                       {step.title}
                     </h3>
-                  </div>
-
-                  <p className="text-slate-600 leading-relaxed">
-                    {step.description}
-                  </p>
-
-                  <ul className="space-y-3">
-                    {step.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className="flex items-center text-slate-600"
-                      >
-                        <svg
-                          className="w-5 h-5 text-green-500 mr-3 flex-shrink-0"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Visual */}
-                <div className={`${index % 2 === 1 ? "md:order-1" : ""}`}>
-                  <div className="relative">
-                    <div
-                      className={`w-32 h-32 bg-gradient-to-r ${step.color} rounded-3xl flex items-center justify-center text-white shadow-2xl mx-auto`}
-                    >
-                      {step.icon}
-                    </div>
-
-                    {/* Decorative Elements */}
-                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-cyan-500/20 rounded-full"></div>
-                    <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-blue-500/20 rounded-full"></div>
-                    <div className="absolute top-1/2 -right-8 w-4 h-4 bg-purple-500/20 rounded-full"></div>
+                    <p className="text-lg text-gray-600 leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -233,38 +93,25 @@ export default function Methodology() {
 
           {/* CTA Section */}
           <div
-            className={`text-center transform transition-all duration-1000 delay-1000 ${
+            className={`text-center mt-20 transform transition-all duration-1000 delay-1000 ${
               isVisible
                 ? "translate-y-0 opacity-100"
-                : "translate-y-10 opacity-0"
+                : "translate-y-20 opacity-0"
             }`}
           >
-            <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-8 text-white shadow-2xl">
-              <h3 className="text-2xl font-bold mb-4">
+            <div className="bg-black text-white p-16">
+              <h3 className="text-4xl font-light mb-6">
                 Pronto para começar seu projeto?
               </h3>
-              <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-                Vamos aplicar nossa metodologia estruturada para criar um
-                projeto que gere resultados reais para o seu negócio.
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Vamos aplicar nossa metodologia comprovada para criar um projeto
+                que gere resultados reais
               </p>
               <Link
                 href="#contato"
-                className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                className="inline-block px-8 py-4 bg-white text-black font-medium hover:bg-gray-100 transition-colors duration-300"
               >
-                Solicitar Orçamento
-                <svg
-                  className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
+                Iniciar Projeto Agora
               </Link>
             </div>
           </div>
