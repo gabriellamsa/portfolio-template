@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -17,11 +18,12 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Na página de contato e portfólio, sempre mostrar fundo branco
+  // Na página de contato, portfólio e equipe, sempre mostrar fundo branco
   const isContactPage = pathname === "/contato";
   const isPortfolioPage = pathname === "/portfolio";
+  const isTeamPage = pathname === "/equipe";
   const shouldShowWhiteBackground =
-    isScrolled || isContactPage || isPortfolioPage;
+    isScrolled || isContactPage || isPortfolioPage || isTeamPage;
 
   return (
     <nav
@@ -35,11 +37,20 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link
-            href={isContactPage || isPortfolioPage ? "/#home" : "#home"}
+            href={
+              isContactPage || isPortfolioPage || isTeamPage
+                ? "/#home"
+                : "#home"
+            }
             className="flex items-center space-x-3 group"
           >
-            <div className="w-10 h-10 bg-black rounded flex items-center justify-center group-hover:bg-gray-800 transition-colors duration-300">
-              <span className="text-white font-bold text-xl">D</span>
+            <div className="w-10 h-10 relative group-hover:opacity-80 transition-opacity duration-300">
+              <Image
+                src="/wb-logo.png"
+                alt="webluma logo"
+                fill
+                className="object-contain"
+              />
             </div>
             <div>
               <span
@@ -47,14 +58,17 @@ export default function Navbar() {
                   shouldShowWhiteBackground ? "text-black" : "text-white"
                 }`}
               >
-                DevWeb
+                web
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 drop-shadow-lg">
+                  luma
+                </span>
               </span>
               <span
                 className={`block text-xs transition-colors duration-300 ${
                   shouldShowWhiteBackground ? "text-gray-500" : "text-white/60"
                 }`}
               >
-                Frontend Developer
+                Web Development
               </span>
             </div>
           </Link>
@@ -62,7 +76,11 @@ export default function Navbar() {
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
-              href={isContactPage || isPortfolioPage ? "/#home" : "#home"}
+              href={
+                isContactPage || isPortfolioPage || isTeamPage
+                  ? "/#home"
+                  : "#home"
+              }
               className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
                 shouldShowWhiteBackground ? "text-black" : "text-white"
               }`}
@@ -70,7 +88,11 @@ export default function Navbar() {
               Início
             </Link>
             <Link
-              href={isContactPage || isPortfolioPage ? "/#sobre" : "#sobre"}
+              href={
+                isContactPage || isPortfolioPage || isTeamPage
+                  ? "/#sobre"
+                  : "#sobre"
+              }
               className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
                 shouldShowWhiteBackground ? "text-black" : "text-white"
               }`}
@@ -79,7 +101,9 @@ export default function Navbar() {
             </Link>
             <Link
               href={
-                isContactPage || isPortfolioPage ? "/#servicos" : "#servicos"
+                isContactPage || isPortfolioPage || isTeamPage
+                  ? "/#servicos"
+                  : "#servicos"
               }
               className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
                 shouldShowWhiteBackground ? "text-black" : "text-white"
@@ -96,8 +120,16 @@ export default function Navbar() {
               Portfólio
             </Link>
             <Link
+              href="/equipe"
+              className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
+                shouldShowWhiteBackground ? "text-black" : "text-white"
+              }`}
+            >
+              Equipe
+            </Link>
+            <Link
               href={
-                isContactPage || isPortfolioPage
+                isContactPage || isPortfolioPage || isTeamPage
                   ? "/#metodologia"
                   : "#metodologia"
               }

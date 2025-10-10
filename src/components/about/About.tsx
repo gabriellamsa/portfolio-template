@@ -62,7 +62,7 @@ export default function About() {
                 nossos clientes.
               </p>
               <Link
-                href="#contato"
+                href="/equipe"
                 className="inline-block px-8 py-4 bg-black text-white font-medium hover:bg-gray-800 transition-colors duration-300"
               >
                 Conhecer Equipe

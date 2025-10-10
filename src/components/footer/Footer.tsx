@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -8,6 +9,7 @@ export default function Footer() {
   const pathname = usePathname();
   const isContactPage = pathname === "/contato";
   const isPortfolioPage = pathname === "/portfolio";
+  const isTeamPage = pathname === "/equipe";
   const [particles, setParticles] = useState<
     Array<{
       id: number;
@@ -80,20 +82,28 @@ export default function Footer() {
   const quickLinks = [
     {
       name: "Início",
-      href: isContactPage || isPortfolioPage ? "/#home" : "#home",
+      href: isContactPage || isPortfolioPage || isTeamPage ? "/#home" : "#home",
     },
     {
       name: "Sobre",
-      href: isContactPage || isPortfolioPage ? "/#sobre" : "#sobre",
+      href:
+        isContactPage || isPortfolioPage || isTeamPage ? "/#sobre" : "#sobre",
     },
     {
       name: "Serviços",
-      href: isContactPage || isPortfolioPage ? "/#servicos" : "#servicos",
+      href:
+        isContactPage || isPortfolioPage || isTeamPage
+          ? "/#servicos"
+          : "#servicos",
     },
     { name: "Portfólio", href: "/portfolio" },
+    { name: "Equipe", href: "/equipe" },
     {
       name: "Metodologia",
-      href: isContactPage || isPortfolioPage ? "/#metodologia" : "#metodologia",
+      href:
+        isContactPage || isPortfolioPage || isTeamPage
+          ? "/#metodologia"
+          : "#metodologia",
     },
   ];
 
@@ -136,14 +146,28 @@ export default function Footer() {
             {/* Logo e Descrição */}
             <div className="md:col-span-1">
               <Link
-                href={isContactPage || isPortfolioPage ? "/#home" : "#home"}
+                href={
+                  isContactPage || isPortfolioPage || isTeamPage
+                    ? "/#home"
+                    : "#home"
+                }
                 className="flex items-center space-x-3 mb-6"
               >
-                <div className="w-10 h-10 bg-white rounded flex items-center justify-center">
-                  <span className="text-black font-bold text-xl">D</span>
+                <div className="w-10 h-10 relative">
+                  <Image
+                    src="/wb-logo.png"
+                    alt="webluma logo"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
                 <div>
-                  <span className="text-white text-xl font-light">DevWeb</span>
+                  <span className="text-white text-xl font-light">
+                    web
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 drop-shadow-lg">
+                      luma
+                    </span>
+                  </span>
                   <span className="block text-sm text-gray-400">
                     Frontend Developer
                   </span>
@@ -210,10 +234,10 @@ export default function Footer() {
               <div className="space-y-3">
                 <div className="text-gray-400 text-base">
                   <a
-                    href="mailto:contato@devweb.com"
+                    href="mailto:contato@webluma.com"
                     className="hover:text-white transition-colors duration-300"
                   >
-                    contato@devweb.com
+                    contato@webluma.com
                   </a>
                 </div>
                 <div className="text-gray-400 text-base">
@@ -249,7 +273,13 @@ export default function Footer() {
           {/* Copyright */}
           <div className="mt-12 pt-8 border-t border-gray-800">
             <div className="text-gray-400 text-base">
-              <p>&copy; 2025 DevWeb. Todos os direitos reservados.</p>
+              <p>
+                &copy; {new Date().getFullYear()}{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 drop-shadow-lg">
+                  webluma
+                </span>
+                . Todos os direitos reservados.
+              </p>
             </div>
           </div>
         </div>

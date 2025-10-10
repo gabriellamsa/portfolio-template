@@ -5,9 +5,37 @@ import { useEffect, useState } from "react";
 
 export default function Services() {
   const [isVisible, setIsVisible] = useState(false);
+  const [particles, setParticles] = useState<
+    Array<{
+      id: number;
+      width: number;
+      height: number;
+      left: number;
+      top: number;
+      duration: number;
+      delay: number;
+    }>
+  >([]);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 400);
+
+    // Gerar partículas apenas no cliente para evitar erro de hidratação
+    const generateParticles = () => {
+      const newParticles = Array.from({ length: 150 }).map((_, i) => ({
+        id: i,
+        width: Math.random() * 3 + 1,
+        height: Math.random() * 3 + 1,
+        left: Math.random() * 100,
+        top: Math.random() * 100,
+        duration: Math.random() * 4 + 2,
+        delay: Math.random() * 2,
+      }));
+      setParticles(newParticles);
+    };
+
+    generateParticles();
+
     return () => clearTimeout(timer);
   }, []);
 
@@ -128,19 +156,39 @@ export default function Services() {
                 : "translate-y-20 opacity-0"
             }`}
           >
-            <div className="bg-black text-white p-16">
-              <h3 className="text-4xl font-light mb-6">
-                Não encontrou o que procura?
-              </h3>
-              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Entre em contato para uma solução personalizada
-              </p>
-              <Link
-                href="/contato"
-                className="inline-block px-8 py-4 bg-white text-black font-medium hover:bg-gray-100 transition-colors duration-300"
-              >
-                Falar com Especialista
-              </Link>
+            <div className="bg-black text-white p-16 relative overflow-hidden">
+              {/* Animated Particles Background */}
+              <div className="absolute inset-0 z-0">
+                {particles.map((particle) => (
+                  <div
+                    key={particle.id}
+                    className="absolute bg-white/30 rounded-full animate-particle-move"
+                    style={{
+                      width: `${particle.width}px`,
+                      height: `${particle.height}px`,
+                      left: `${particle.left}%`,
+                      top: `${particle.top}%`,
+                      animationDuration: `${particle.duration}s`,
+                      animationDelay: `${particle.delay}s`,
+                    }}
+                  />
+                ))}
+              </div>
+
+              <div className="relative z-10">
+                <h3 className="text-4xl font-light mb-6">
+                  Não encontrou o que procura?
+                </h3>
+                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                  Entre em contato para uma solução personalizada
+                </p>
+                <Link
+                  href="/contato"
+                  className="inline-block px-8 py-4 bg-white text-black font-medium hover:bg-gray-100 transition-colors duration-300"
+                >
+                  Falar com Especialista
+                </Link>
+              </div>
             </div>
           </div>
         </div>

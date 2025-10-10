@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Desenvolvimento Web Moderno | Sites que Convertem",
+  title: "Webluma | Desenvolvimento Web que Ilumina seu Negócio",
   description:
-    "Desenvolvimento web profissional para pequenas empresas. Sites, landing pages e e-commerce em React com foco em conversão e resultados.",
+    "Criamos experiências digitais luminosas que transformam ideias em realidade. Sites modernos, landing pages e e-commerce com design único e alta conversão.",
 };
 
 export default function RootLayout({

@@ -72,7 +72,7 @@ export default function Hero() {
             {/* Main Title */}
             <h1 className="text-8xl md:text-9xl font-thin text-white mb-8 leading-none">
               <span className="block">WEB</span>
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-yellow-400 to-orange-400 drop-shadow-lg">
                 DEVELOPMENT
               </span>
             </h1>
