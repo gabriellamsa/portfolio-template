@@ -17,9 +17,11 @@ Este portfólio foi criado para apresentar os serviços de desenvolvimento web p
 
 ### 🛠️ Tecnologias Utilizadas
 
-- **Next.js 14** - Framework React com App Router
+- **Next.js 15** - Framework React com App Router
 - **TypeScript** - Tipagem estática para JavaScript
 - **Tailwind CSS** - Framework CSS utilitário
+- **JSON-LD** - Dados estruturados para SEO
+- **Schema.org** - Vocabulário semântico para web
 - **Responsive Design** - Otimizado para todos os dispositivos
 
 ### 🚀 Como Executar
@@ -53,6 +55,10 @@ Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o 
 ```
 src/
 ├── app/                 # Páginas e layouts
+│   ├── contato/        # Página de contato
+│   ├── equipe/         # Página da equipe
+│   ├── portfolio/      # Página do portfólio
+│   └── figma-demo/     # Demonstração Figma
 ├── components/          # Componentes reutilizáveis
 │   ├── about/          # Seção sobre
 │   ├── footer/         # Rodapé
@@ -60,7 +66,14 @@ src/
 │   ├── methodology/    # Metodologia
 │   ├── navbar/         # Navegação
 │   ├── portfolio/      # Portfólio de projetos
-│   └── services/       # Serviços oferecidos
+│   ├── services/       # Serviços oferecidos
+│   └── seo/            # Componentes de SEO
+├── config/              # Configurações
+│   └── seo.ts          # Dados estruturados
+├── lib/                 # Utilitários
+│   └── jsonld.ts       # Geração de JSON-LD
+└── hooks/               # React Hooks
+    └── useFigma.ts     # Hook para Figma
 ```
 
 ### 🎨 Funcionalidades
@@ -70,12 +83,52 @@ src/
 - **Sistema de Contato**: Formulários para solicitação de orçamentos
 - **Apresentação de Serviços**: Detalhamento das soluções oferecidas
 - **Suporte ao Cliente**: Atendimento personalizado e consultoria
+- **SEO Avançado**: Dados estruturados JSON-LD para melhor posicionamento
+- **Rich Snippets**: Resultados de busca enriquecidos
+- **Navegação Estruturada**: Breadcrumbs para melhor UX
+- **Dados Semânticos**: Schema.org para compreensão dos buscadores
+
+### 🔍 SEO e Dados Estruturados
+
+O projeto implementa um sistema completo de dados estruturados JSON-LD para otimização de SEO:
+
+#### **Tipos de Schema Implementados:**
+
+- **Organization**: Dados da empresa Webluma
+- **Website**: Informações do site principal
+- **Services**: Serviços oferecidos
+- **CreativeWork**: Projetos do portfólio
+- **Person**: Membros da equipe
+- **ContactPage**: Página de contato
+- **LocalBusiness**: Negócio local
+- **FAQ**: Perguntas frequentes
+- **BreadcrumbList**: Navegação estruturada
+
+#### **Benefícios:**
+
+- ✅ **Rich Snippets**: Resultados de busca enriquecidos
+- ✅ **Melhor Indexação**: Google entende melhor o conteúdo
+- ✅ **Dados Estruturados**: Informações organizadas para buscadores
+- ✅ **Schema.org Compliant**: Seguindo padrões internacionais
+
+#### **Validação:**
+
+- [Google Rich Results Test](https://search.google.com/test/rich-results)
+- [Schema.org Validator](https://validator.schema.org/)
+- [Google Search Console](https://search.google.com/search-console)
 
 ### 🚀 Deploy
 
 O projeto pode ser facilmente deployado na [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
 Para mais detalhes sobre deploy, consulte a [documentação de deploy do Next.js](https://nextjs.org/docs/app/building-your-application/deploying).
+
+### 📚 Documentação Adicional
+
+- **[JSON-LD Implementation Guide](JSON-LD-IMPLEMENTATION.md)** - Guia completo sobre a implementação de dados estruturados
+- **[Next.js Documentation](https://nextjs.org/docs)** - Documentação oficial do Next.js
+- **[Tailwind CSS Documentation](https://tailwindcss.com/docs)** - Documentação do Tailwind CSS
+- **[Schema.org Documentation](https://schema.org/)** - Vocabulário semântico para web
 
 ### 📄 Licença
 
@@ -104,9 +157,11 @@ This portfolio was created to present custom web development services. We offer:
 
 ### 🛠️ Technologies Used
 
-- **Next.js 14** - React framework with App Router
+- **Next.js 15** - React framework with App Router
 - **TypeScript** - Static typing for JavaScript
 - **Tailwind CSS** - Utility-first CSS framework
+- **JSON-LD** - Structured data for SEO
+- **Schema.org** - Semantic vocabulary for web
 - **Responsive Design** - Optimized for all devices
 
 ### 🚀 How to Run
@@ -140,6 +195,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ```
 src/
 ├── app/                 # Pages and layouts
+│   ├── contato/        # Contact page
+│   ├── equipe/         # Team page
+│   ├── portfolio/      # Portfolio page
+│   └── figma-demo/     # Figma demonstration
 ├── components/          # Reusable components
 │   ├── about/          # About section
 │   ├── footer/         # Footer
@@ -147,7 +206,14 @@ src/
 │   ├── methodology/    # Methodology
 │   ├── navbar/         # Navigation
 │   ├── portfolio/      # Project portfolio
-│   └── services/       # Services offered
+│   ├── services/       # Services offered
+│   └── seo/            # SEO components
+├── config/              # Configurations
+│   └── seo.ts          # Structured data
+├── lib/                 # Utilities
+│   └── jsonld.ts       # JSON-LD generation
+└── hooks/               # React Hooks
+    └── useFigma.ts     # Figma hook
 ```
 
 ### 🎨 Features
@@ -157,12 +223,52 @@ src/
 - **Contact System**: Forms for quote requests
 - **Services Presentation**: Detailed solutions offered
 - **Customer Support**: Personalized service and consulting
+- **Advanced SEO**: JSON-LD structured data for better ranking
+- **Rich Snippets**: Enhanced search results
+- **Structured Navigation**: Breadcrumbs for better UX
+- **Semantic Data**: Schema.org for search engine understanding
+
+### 🔍 SEO and Structured Data
+
+The project implements a complete JSON-LD structured data system for SEO optimization:
+
+#### **Implemented Schema Types:**
+
+- **Organization**: Webluma company data
+- **Website**: Main site information
+- **Services**: Offered services
+- **CreativeWork**: Portfolio projects
+- **Person**: Team members
+- **ContactPage**: Contact page
+- **LocalBusiness**: Local business
+- **FAQ**: Frequently asked questions
+- **BreadcrumbList**: Structured navigation
+
+#### **Benefits:**
+
+- ✅ **Rich Snippets**: Enhanced search results
+- ✅ **Better Indexing**: Google understands content better
+- ✅ **Structured Data**: Organized information for search engines
+- ✅ **Schema.org Compliant**: Following international standards
+
+#### **Validation:**
+
+- [Google Rich Results Test](https://search.google.com/test/rich-results)
+- [Schema.org Validator](https://validator.schema.org/)
+- [Google Search Console](https://search.google.com/search-console)
 
 ### 🚀 Deploy
 
 The project can be easily deployed on the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme).
 
 For more details about deployment, check the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
+
+### 📚 Additional Documentation
+
+- **[JSON-LD Implementation Guide](JSON-LD-IMPLEMENTATION.md)** - Complete guide on structured data implementation
+- **[Next.js Documentation](https://nextjs.org/docs)** - Official Next.js documentation
+- **[Tailwind CSS Documentation](https://tailwindcss.com/docs)** - Tailwind CSS documentation
+- **[Schema.org Documentation](https://schema.org/)** - Semantic vocabulary for web
 
 ### 📄 License
 
