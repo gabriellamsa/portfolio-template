@@ -5,6 +5,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import JsonLd from "@/components/seo/JsonLd";
+import { generatePersonJsonLd, generateBreadcrumbJsonLd } from "@/lib/jsonld";
+import { teamMembersData } from "@/config/seo";
 
 export default function EquipePage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -56,8 +59,17 @@ export default function EquipePage() {
     },
   ];
 
+  const teamJsonLd = teamMembersData.map((member) =>
+    generatePersonJsonLd(member)
+  );
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: "Início", url: "https://webluma.com" },
+    { name: "Equipe", url: "https://webluma.com/equipe" },
+  ]);
+
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd data={[...teamJsonLd, breadcrumbJsonLd]} />
       <Navbar />
       <div className="pt-32 pb-12">
         <div className="container mx-auto px-4 max-w-6xl">

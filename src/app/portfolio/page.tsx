@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import JsonLd from "@/components/seo/JsonLd";
+import { generateProjectJsonLd, generateBreadcrumbJsonLd } from "@/lib/jsonld";
+import { portfolioProjectsData } from "@/config/seo";
 
 export default function PortfolioPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -83,8 +86,17 @@ export default function PortfolioPage() {
       ? projects
       : projects.filter((project) => project.category === selectedCategory);
 
+  const projectsJsonLd = portfolioProjectsData.map((project) =>
+    generateProjectJsonLd(project)
+  );
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: "Início", url: "https://webluma.com" },
+    { name: "Portfólio", url: "https://webluma.com/portfolio" },
+  ]);
+
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd data={[...projectsJsonLd, breadcrumbJsonLd]} />
       <Navbar />
       <div className="pt-32 pb-12">
         <div className="container mx-auto px-4 max-w-6xl">

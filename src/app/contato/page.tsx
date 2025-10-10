@@ -4,6 +4,13 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import JsonLd from "@/components/seo/JsonLd";
+import {
+  generateContactPageJsonLd,
+  generateLocalBusinessJsonLd,
+  generateBreadcrumbJsonLd,
+} from "@/lib/jsonld";
+import { contactPageData, organizationData } from "@/config/seo";
 
 export default function ContatoPage() {
   const [formData, setFormData] = useState({
@@ -77,9 +84,26 @@ export default function ContatoPage() {
     "Outro",
   ];
 
+  const contactJsonLd = generateContactPageJsonLd(contactPageData);
+  const localBusinessJsonLd = generateLocalBusinessJsonLd({
+    name: organizationData.name,
+    description: organizationData.description,
+    url: organizationData.url,
+    telephone: organizationData.contactPoint?.telephone,
+    email: organizationData.contactPoint?.email,
+    address: organizationData.address,
+    openingHours: ["Mo-Fr 09:00-18:00"],
+    priceRange: "$$",
+  });
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: "Início", url: "https://webluma.com" },
+    { name: "Contato", url: "https://webluma.com/contato" },
+  ]);
+
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-white">
+        <JsonLd data={[contactJsonLd, localBusinessJsonLd, breadcrumbJsonLd]} />
         <Navbar />
         <div className="flex items-center justify-center py-24">
           <div className="max-w-2xl mx-auto text-center px-4">
@@ -122,6 +146,7 @@ export default function ContatoPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd data={[contactJsonLd, localBusinessJsonLd, breadcrumbJsonLd]} />
       <Navbar />
       <div className="pt-24 pb-12">
         <div className="container mx-auto px-4 max-w-6xl">

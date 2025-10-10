@@ -162,10 +162,11 @@ export default function Services() {
               spaceBetween={20}
               slidesPerView={1}
               navigation={false}
-              pagination={{ 
+              pagination={{
                 clickable: true,
-                bulletClass: 'swiper-pagination-bullet !bg-gray-300 !opacity-100',
-                bulletActiveClass: 'swiper-pagination-bullet-active !bg-black'
+                bulletClass:
+                  "swiper-pagination-bullet !bg-gray-300 !opacity-100",
+                bulletActiveClass: "swiper-pagination-bullet-active !bg-black",
               }}
               autoplay={{
                 delay: 5000,
