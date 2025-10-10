@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 export default function Footer() {
   const pathname = usePathname();
   const isContactPage = pathname === "/contato";
+  const isPortfolioPage = pathname === "/portfolio";
   const [particles, setParticles] = useState<
     Array<{
       id: number;
@@ -77,13 +78,22 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { name: "Início", href: isContactPage ? "/#home" : "#home" },
-    { name: "Sobre", href: isContactPage ? "/#sobre" : "#sobre" },
-    { name: "Serviços", href: isContactPage ? "/#servicos" : "#servicos" },
-    { name: "Portfólio", href: isContactPage ? "/#portfolio" : "#portfolio" },
+    {
+      name: "Início",
+      href: isContactPage || isPortfolioPage ? "/#home" : "#home",
+    },
+    {
+      name: "Sobre",
+      href: isContactPage || isPortfolioPage ? "/#sobre" : "#sobre",
+    },
+    {
+      name: "Serviços",
+      href: isContactPage || isPortfolioPage ? "/#servicos" : "#servicos",
+    },
+    { name: "Portfólio", href: "/portfolio" },
     {
       name: "Metodologia",
-      href: isContactPage ? "/#metodologia" : "#metodologia",
+      href: isContactPage || isPortfolioPage ? "/#metodologia" : "#metodologia",
     },
   ];
 
@@ -126,7 +136,7 @@ export default function Footer() {
             {/* Logo e Descrição */}
             <div className="md:col-span-1">
               <Link
-                href={isContactPage ? "/#home" : "#home"}
+                href={isContactPage || isPortfolioPage ? "/#home" : "#home"}
                 className="flex items-center space-x-3 mb-6"
               >
                 <div className="w-10 h-10 bg-white rounded flex items-center justify-center">

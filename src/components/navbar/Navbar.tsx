@@ -9,7 +9,6 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -18,9 +17,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Na página de contato, sempre mostrar fundo branco
+  // Na página de contato e portfólio, sempre mostrar fundo branco
   const isContactPage = pathname === "/contato";
-  const shouldShowWhiteBackground = isScrolled || isContactPage;
+  const isPortfolioPage = pathname === "/portfolio";
+  const shouldShowWhiteBackground =
+    isScrolled || isContactPage || isPortfolioPage;
 
   return (
     <nav
@@ -34,7 +35,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link
-            href={isContactPage ? "/#home" : "#home"}
+            href={isContactPage || isPortfolioPage ? "/#home" : "#home"}
             className="flex items-center space-x-3 group"
           >
             <div className="w-10 h-10 bg-black rounded flex items-center justify-center group-hover:bg-gray-800 transition-colors duration-300">
@@ -61,7 +62,7 @@ export default function Navbar() {
           {/* Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
-              href={isContactPage ? "/#home" : "#home"}
+              href={isContactPage || isPortfolioPage ? "/#home" : "#home"}
               className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
                 shouldShowWhiteBackground ? "text-black" : "text-white"
               }`}
@@ -69,7 +70,7 @@ export default function Navbar() {
               Início
             </Link>
             <Link
-              href={isContactPage ? "/#sobre" : "#sobre"}
+              href={isContactPage || isPortfolioPage ? "/#sobre" : "#sobre"}
               className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
                 shouldShowWhiteBackground ? "text-black" : "text-white"
               }`}
@@ -77,7 +78,9 @@ export default function Navbar() {
               Sobre
             </Link>
             <Link
-              href={isContactPage ? "/#servicos" : "#servicos"}
+              href={
+                isContactPage || isPortfolioPage ? "/#servicos" : "#servicos"
+              }
               className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
                 shouldShowWhiteBackground ? "text-black" : "text-white"
               }`}
@@ -85,7 +88,7 @@ export default function Navbar() {
               Serviços
             </Link>
             <Link
-              href={isContactPage ? "/#portfolio" : "#portfolio"}
+              href="/portfolio"
               className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
                 shouldShowWhiteBackground ? "text-black" : "text-white"
               }`}
@@ -93,7 +96,11 @@ export default function Navbar() {
               Portfólio
             </Link>
             <Link
-              href={isContactPage ? "/#metodologia" : "#metodologia"}
+              href={
+                isContactPage || isPortfolioPage
+                  ? "/#metodologia"
+                  : "#metodologia"
+              }
               className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
                 shouldShowWhiteBackground ? "text-black" : "text-white"
               }`}

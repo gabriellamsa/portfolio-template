@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function FAQ() {
   const [isVisible, setIsVisible] = useState(false);
@@ -141,12 +142,12 @@ export default function FAQ() {
               <p className="text-gray-600 mb-6">
                 Entre em contato conosco e esclareça todas as suas questões
               </p>
-              <a
-                href="#contato"
+              <Link
+                href="/contato"
                 className="inline-block px-8 py-3 bg-black text-white font-medium hover:bg-gray-800 transition-colors duration-300"
               >
-                Falar Conosco
-              </a>
+                Fale Conosco
+              </Link>
             </div>
           </div>
         </div>

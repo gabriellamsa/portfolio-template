@@ -109,7 +109,7 @@ export default function Services() {
                       {service.price}
                     </p>
                     <Link
-                      href="#contato"
+                      href="/contato"
                       className="block w-full text-center bg-black text-white py-3 px-6 hover:bg-gray-800 transition-colors duration-300"
                     >
                       Solicitar Orçamento
@@ -136,7 +136,7 @@ export default function Services() {
                 Entre em contato para uma solução personalizada
               </p>
               <Link
-                href="#contato"
+                href="/contato"
                 className="inline-block px-8 py-4 bg-white text-black font-medium hover:bg-gray-100 transition-colors duration-300"
               >
                 Falar com Especialista

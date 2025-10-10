@@ -85,13 +85,13 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
               <Link
-                href="/contato"
+                href="#servicos"
                 className="px-8 py-4 bg-white text-black font-semibold rounded-none hover:bg-white/90 transition-all duration-300 transform hover:scale-105"
               >
                 Começar Projeto
               </Link>
               <Link
-                href="#portfolio"
+                href="/portfolio"
                 className="px-8 py-4 border border-white/30 text-white hover:bg-white/5 transition-all duration-300 transform hover:scale-105"
               >
                 Ver Trabalhos
