@@ -60,27 +60,27 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-24 bg-white">
-      <div className="container mx-auto px-4">
+    <section id="faq" className="py-16 sm:py-20 lg:py-24 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div
-            className={`text-center mb-16 transform transition-all duration-1000 ${
+            className={`text-center mb-12 sm:mb-16 transform transition-all duration-1000 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-10 opacity-0"
             }`}
           >
-            <h2 className="text-5xl font-thin text-black mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-thin text-black mb-4 sm:mb-6">
               Perguntas Frequentes
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Tire suas dúvidas sobre nossos serviços e processos
             </p>
           </div>
 
           {/* FAQ Items */}
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {faqs.map((faq, index) => (
               <div
                 key={index}
@@ -94,13 +94,13 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-100 transition-colors duration-300"
+                  className="w-full px-4 sm:px-8 py-4 sm:py-6 text-left flex justify-between items-start sm:items-center hover:bg-gray-100 transition-colors duration-300"
                 >
-                  <h3 className="text-lg font-medium text-black pr-4">
+                  <h3 className="text-base sm:text-lg font-medium text-black pr-3 sm:pr-4 leading-tight">
                     {faq.question}
                   </h3>
                   <svg
-                    className={`w-6 h-6 text-gray-500 transition-transform duration-300 ${
+                    className={`w-5 h-5 sm:w-6 sm:h-6 text-gray-500 transition-transform duration-300 flex-shrink-0 mt-1 sm:mt-0 ${
                       openIndex === index ? "rotate-180" : ""
                     }`}
                     fill="none"
@@ -117,8 +117,8 @@ export default function FAQ() {
                 </button>
 
                 {openIndex === index && (
-                  <div className="px-8 pb-6">
-                    <p className="text-gray-700 leading-relaxed">
+                  <div className="px-4 sm:px-8 pb-4 sm:pb-6">
+                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
@@ -129,22 +129,22 @@ export default function FAQ() {
 
           {/* CTA */}
           <div
-            className={`text-center mt-16 transform transition-all duration-1000 delay-900 ${
+            className={`text-center mt-12 sm:mt-16 transform transition-all duration-1000 delay-900 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-20 opacity-0"
             }`}
           >
-            <div className="bg-gray-50 rounded-lg p-8 max-w-2xl mx-auto">
-              <h3 className="text-2xl font-light text-black mb-4">
+            <div className="bg-gray-50 rounded-lg p-6 sm:p-8 max-w-2xl mx-auto">
+              <h3 className="text-xl sm:text-2xl font-light text-black mb-3 sm:mb-4">
                 Ainda tem dúvidas?
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
                 Entre em contato conosco e esclareça todas as suas questões
               </p>
               <Link
                 href="/contato"
-                className="inline-block px-8 py-3 bg-black text-white font-medium hover:bg-gray-800 transition-colors duration-300"
+                className="inline-block px-6 sm:px-8 py-2 sm:py-3 bg-black text-white font-medium hover:bg-gray-800 transition-colors duration-300 text-sm sm:text-base"
               >
                 Fale Conosco
               </Link>

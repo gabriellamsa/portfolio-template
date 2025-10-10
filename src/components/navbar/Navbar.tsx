@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -17,6 +18,14 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   // Na página de contato, portfólio e equipe, sempre mostrar fundo branco
   const isContactPage = pathname === "/contato";
@@ -33,8 +42,8 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link
             href={
@@ -42,9 +51,9 @@ export default function Navbar() {
                 ? "/#home"
                 : "#home"
             }
-            className="flex items-center space-x-3 group"
+            className="flex items-center space-x-2 sm:space-x-3 group"
           >
-            <div className="w-10 h-10 relative group-hover:opacity-80 transition-opacity duration-300">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 relative group-hover:opacity-80 transition-opacity duration-300">
               <Image
                 src="/wb-logo.png"
                 alt="webluma logo"
@@ -54,7 +63,7 @@ export default function Navbar() {
             </div>
             <div>
               <span
-                className={`text-2xl font-light transition-colors duration-300 ${
+                className={`text-lg sm:text-xl lg:text-2xl font-light transition-colors duration-300 ${
                   shouldShowWhiteBackground ? "text-black" : "text-white"
                 }`}
               >
@@ -142,10 +151,10 @@ export default function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
+          <div className="hidden sm:block">
             <Link
               href="/contato"
-              className={`px-6 py-3 font-medium transition-all duration-300 transform hover:scale-105 ${
+              className={`px-4 sm:px-6 py-2 sm:py-3 text-sm font-medium transition-all duration-300 transform hover:scale-105 ${
                 shouldShowWhiteBackground
                   ? "bg-black text-white hover:bg-gray-800"
                   : "bg-white text-black hover:bg-gray-100"
@@ -156,28 +165,121 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="sm:hidden">
             <button
+              onClick={toggleMobileMenu}
               className={`p-2 transition-colors duration-300 ${
                 shouldShowWhiteBackground ? "text-black" : "text-white"
               }`}
+              aria-label="Toggle mobile menu"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
+              {isMobileMenuOpen ? (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              )}
             </button>
           </div>
         </div>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="sm:hidden bg-white border-t border-gray-200">
+            <div className="px-4 py-6 space-y-4">
+              <Link
+                href={
+                  isContactPage || isPortfolioPage || isTeamPage
+                    ? "/#home"
+                    : "#home"
+                }
+                onClick={closeMobileMenu}
+                className="block text-black font-medium hover:text-gray-600 transition-colors duration-300"
+              >
+                Início
+              </Link>
+              <Link
+                href={
+                  isContactPage || isPortfolioPage || isTeamPage
+                    ? "/#sobre"
+                    : "#sobre"
+                }
+                onClick={closeMobileMenu}
+                className="block text-black font-medium hover:text-gray-600 transition-colors duration-300"
+              >
+                Sobre
+              </Link>
+              <Link
+                href={
+                  isContactPage || isPortfolioPage || isTeamPage
+                    ? "/#servicos"
+                    : "#servicos"
+                }
+                onClick={closeMobileMenu}
+                className="block text-black font-medium hover:text-gray-600 transition-colors duration-300"
+              >
+                Serviços
+              </Link>
+              <Link
+                href="/portfolio"
+                onClick={closeMobileMenu}
+                className="block text-black font-medium hover:text-gray-600 transition-colors duration-300"
+              >
+                Portfólio
+              </Link>
+              <Link
+                href="/equipe"
+                onClick={closeMobileMenu}
+                className="block text-black font-medium hover:text-gray-600 transition-colors duration-300"
+              >
+                Equipe
+              </Link>
+              <Link
+                href={
+                  isContactPage || isPortfolioPage || isTeamPage
+                    ? "/#metodologia"
+                    : "#metodologia"
+                }
+                onClick={closeMobileMenu}
+                className="block text-black font-medium hover:text-gray-600 transition-colors duration-300"
+              >
+                Metodologia
+              </Link>
+              <div className="pt-4 border-t border-gray-200">
+                <Link
+                  href="/contato"
+                  onClick={closeMobileMenu}
+                  className="block w-full text-center bg-black text-white py-3 px-6 font-medium hover:bg-gray-800 transition-colors duration-300"
+                >
+                  Contato
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

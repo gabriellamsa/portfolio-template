@@ -67,28 +67,28 @@ export default function Methodology() {
   ];
 
   return (
-    <section id="metodologia" className="py-32 bg-gray-50">
-      <div className="container mx-auto px-4">
+    <section id="metodologia" className="py-16 sm:py-24 lg:py-32 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div
-            className={`text-center mb-20 transform transition-all duration-1000 ${
+            className={`text-center mb-12 sm:mb-16 lg:mb-20 transform transition-all duration-1000 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-10 opacity-0"
             }`}
           >
-            <h2 className="text-6xl font-thin text-black mb-6">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-thin text-black mb-4 sm:mb-6">
               Nossa Metodologia
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Um processo transparente e eficiente para garantir o sucesso do
               seu projeto
             </p>
           </div>
 
           {/* Steps */}
-          <div className="space-y-16">
+          <div className="space-y-8 sm:space-y-12 lg:space-y-16">
             {steps.map((step, index) => (
               <div
                 key={index}
@@ -100,17 +100,17 @@ export default function Methodology() {
                     : "translate-y-20 opacity-0"
                 }`}
               >
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mr-8">
-                    <div className="w-16 h-16 bg-black text-white rounded-full flex items-center justify-center text-2xl font-light">
+                <div className="flex flex-col sm:flex-row items-start">
+                  <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-8">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-black text-white rounded-full flex items-center justify-center text-lg sm:text-2xl font-light">
                       {step.number}
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-3xl font-light text-black mb-4">
+                    <h3 className="text-xl sm:text-2xl lg:text-3xl font-light text-black mb-3 sm:mb-4">
                       {step.title}
                     </h3>
-                    <p className="text-lg text-gray-600 leading-relaxed">
+                    <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                       {step.description}
                     </p>
                   </div>
@@ -121,13 +121,13 @@ export default function Methodology() {
 
           {/* CTA Section */}
           <div
-            className={`text-center mt-20 transform transition-all duration-1000 delay-1000 ${
+            className={`text-center mt-12 sm:mt-16 lg:mt-20 transform transition-all duration-1000 delay-1000 ${
               isVisible
                 ? "translate-y-0 opacity-100"
                 : "translate-y-20 opacity-0"
             }`}
           >
-            <div className="bg-black text-white p-16 relative overflow-hidden">
+            <div className="bg-black text-white p-8 sm:p-12 lg:p-16 relative overflow-hidden">
               {/* Animated Particles Background */}
               <div className="absolute inset-0 z-0">
                 {particles.map((particle) => (
@@ -147,16 +147,16 @@ export default function Methodology() {
               </div>
 
               <div className="relative z-10">
-                <h3 className="text-4xl font-light mb-6">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-light mb-4 sm:mb-6">
                   Pronto para começar seu projeto?
                 </h3>
-                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
                   Vamos aplicar nossa metodologia comprovada para criar um
                   projeto que gere resultados reais
                 </p>
                 <Link
                   href="#servicos"
-                  className="inline-block px-8 py-4 bg-white text-black font-medium hover:bg-gray-100 transition-colors duration-300"
+                  className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white text-black font-medium hover:bg-gray-100 transition-colors duration-300 text-sm sm:text-base"
                 >
                   Iniciar Projeto Agora
                 </Link>
