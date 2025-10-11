@@ -27,18 +27,25 @@ export default function DemoLive({
       // Lista de APIs para tentar
       const apis = [
         `https://htmlcsstoimage.com/demo/800x600/${encodeURIComponent(url)}`,
-        `https://screenshot.tech/screenshot/${encodeURIComponent(url)}?width=800&height=600`,
-        `https://api.screenshotapi.net/api/v1/screenshot?url=${encodeURIComponent(url)}&width=800&height=600&format=png&full_page=false`
+        `https://screenshot.tech/screenshot/${encodeURIComponent(
+          url
+        )}?width=800&height=600`,
+        `https://api.screenshotapi.net/api/v1/screenshot?url=${encodeURIComponent(
+          url
+        )}&width=800&height=600&format=png&full_page=false`,
       ];
 
       let success = false;
-      
+
       for (const apiUrl of apis) {
         try {
           await new Promise((resolve, reject) => {
             const img = new window.Image();
-            const timeout = setTimeout(() => reject(new Error('Timeout')), 5000);
-            
+            const timeout = setTimeout(
+              () => reject(new Error("Timeout")),
+              5000
+            );
+
             img.onload = () => {
               clearTimeout(timeout);
               setImageUrl(apiUrl);
@@ -46,22 +53,22 @@ export default function DemoLive({
               success = true;
               resolve(true);
             };
-            
+
             img.onerror = () => {
               clearTimeout(timeout);
-              reject(new Error('Failed to load'));
+              reject(new Error("Failed to load"));
             };
-            
+
             img.src = apiUrl;
           });
-          
+
           if (success) break;
         } catch (err) {
           console.log(`API falhou: ${apiUrl}`);
           continue;
         }
       }
-      
+
       if (!success) {
         setError(true);
         setIsLoading(false);
@@ -99,7 +106,7 @@ export default function DemoLive({
           <iframe
             src={url}
             className="w-full h-full border-0 scale-50 origin-top-left"
-            style={{ width: '200%', height: '200%' }}
+            style={{ width: "200%", height: "200%" }}
             title={`Preview de ${title}`}
             sandbox="allow-scripts allow-same-origin"
           />

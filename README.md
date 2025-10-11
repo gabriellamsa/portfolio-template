@@ -58,9 +58,11 @@ src/
 │   ├── contato/        # Página de contato
 │   ├── equipe/         # Página da equipe
 │   ├── portfolio/      # Página do portfólio
+│   ├── demo-live/      # Demonstrações ao vivo
 │   └── figma-demo/     # Demonstração Figma
 ├── components/          # Componentes reutilizáveis
 │   ├── about/          # Seção sobre
+│   ├── demo-live/      # Componente de screenshots dinâmicos
 │   ├── footer/         # Rodapé
 │   ├── hero/           # Seção principal
 │   ├── methodology/    # Metodologia
@@ -79,7 +81,8 @@ src/
 ### 🎨 Funcionalidades
 
 - **Portfólio de Projetos**: Galeria com trabalhos realizados
-- **Demonstrações Interativas**: Preview dos sites desenvolvidos
+- **Demonstrações ao Vivo**: Screenshots dinâmicos em tempo real dos sites
+- **Filtros Inteligentes**: Sistema de categorização (Websites, Landing Pages, E-commerce)
 - **Sistema de Contato**: Formulários para solicitação de orçamentos
 - **Apresentação de Serviços**: Detalhamento das soluções oferecidas
 - **Suporte ao Cliente**: Atendimento personalizado e consultoria
@@ -87,6 +90,37 @@ src/
 - **Rich Snippets**: Resultados de busca enriquecidos
 - **Navegação Estruturada**: Breadcrumbs para melhor UX
 - **Dados Semânticos**: Schema.org para compreensão dos buscadores
+
+### 🖼️ Demonstrações Dinâmicas
+
+O portfólio implementa um sistema inovador de demonstrações ao vivo:
+
+#### **DemoLive Component:**
+
+- **Screenshots em Tempo Real**: Captura automática de imagens dos sites
+- **Múltiplas APIs**: Fallback inteligente entre diferentes serviços
+- **Loading States**: Feedback visual durante o carregamento
+- **Error Handling**: Tratamento elegante de erros com fallbacks
+- **Responsive Design**: Otimizado para todos os dispositivos
+
+#### **APIs de Screenshot:**
+
+- **htmlcsstoimage.com**: API principal para captura
+- **screenshot.tech**: API secundária de fallback
+- **api.screenshotapi.net**: API terciária para garantia
+
+#### **Categorização Inteligente:**
+
+- **Websites**: Sites institucionais e corporativos
+- **Landing Pages**: Páginas de conversão otimizadas
+- **E-commerce**: Lojas virtuais completas
+
+#### **Benefícios:**
+
+- ✅ **Preview Real**: Clientes veem o site funcionando
+- ✅ **Atualização Automática**: Screenshots sempre atualizados
+- ✅ **Performance**: Carregamento otimizado
+- ✅ **UX Superior**: Experiência interativa
 
 ### 🔍 SEO e Dados Estruturados
 
@@ -198,9 +232,11 @@ src/
 │   ├── contato/        # Contact page
 │   ├── equipe/         # Team page
 │   ├── portfolio/      # Portfolio page
+│   ├── demo-live/      # Live demonstrations
 │   └── figma-demo/     # Figma demonstration
 ├── components/          # Reusable components
 │   ├── about/          # About section
+│   ├── demo-live/      # Dynamic screenshots component
 │   ├── footer/         # Footer
 │   ├── hero/           # Main section
 │   ├── methodology/    # Methodology
@@ -219,7 +255,8 @@ src/
 ### 🎨 Features
 
 - **Project Portfolio**: Gallery with completed works
-- **Interactive Demonstrations**: Preview of developed websites
+- **Live Demonstrations**: Real-time dynamic screenshots of websites
+- **Smart Filtering**: Categorization system (Websites, Landing Pages, E-commerce)
 - **Contact System**: Forms for quote requests
 - **Services Presentation**: Detailed solutions offered
 - **Customer Support**: Personalized service and consulting
@@ -227,6 +264,37 @@ src/
 - **Rich Snippets**: Enhanced search results
 - **Structured Navigation**: Breadcrumbs for better UX
 - **Semantic Data**: Schema.org for search engine understanding
+
+### 🖼️ Dynamic Demonstrations
+
+The portfolio implements an innovative live demonstration system:
+
+#### **DemoLive Component:**
+
+- **Real-time Screenshots**: Automatic capture of website images
+- **Multiple APIs**: Intelligent fallback between different services
+- **Loading States**: Visual feedback during loading
+- **Error Handling**: Elegant error treatment with fallbacks
+- **Responsive Design**: Optimized for all devices
+
+#### **Screenshot APIs:**
+
+- **htmlcsstoimage.com**: Primary API for capture
+- **screenshot.tech**: Secondary fallback API
+- **api.screenshotapi.net**: Tertiary API for guarantee
+
+#### **Smart Categorization:**
+
+- **Websites**: Institutional and corporate sites
+- **Landing Pages**: Conversion-optimized pages
+- **E-commerce**: Complete online stores
+
+#### **Benefits:**
+
+- ✅ **Real Preview**: Clients see the site working
+- ✅ **Automatic Updates**: Screenshots always up-to-date
+- ✅ **Performance**: Optimized loading
+- ✅ **Superior UX**: Interactive experience
 
 ### 🔍 SEO and Structured Data
 
