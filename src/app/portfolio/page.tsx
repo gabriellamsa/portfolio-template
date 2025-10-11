@@ -4,9 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
-import JsonLd from "@/components/seo/JsonLd";
-import { generateProjectJsonLd, generateBreadcrumbJsonLd } from "@/lib/jsonld";
-import { portfolioProjectsData } from "@/config/seo";
+import DemoLive from "@/components/demo-live/DemoLive";
 
 export default function PortfolioPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,66 +16,58 @@ export default function PortfolioPage() {
   }, []);
 
   const categories = [
-    { id: "all", name: "Todos", count: 6 },
-    { id: "website", name: "Websites", count: 2 },
-    { id: "landing", name: "Landing Page", count: 2 },
+    { id: "all", name: "Todos", count: 9 },
+    { id: "website", name: "Websites", count: 3 },
+    { id: "landing", name: "Landing Page", count: 4 },
     { id: "ecommerce", name: "E-commerce", count: 2 },
   ];
 
   const projects = [
     {
       title: "E-commerce de Garrafas de Água",
-      description:
-        "Desenvolvimento de uma loja virtual moderna e responsiva para venda de garrafas de água personalizadas.",
-      image: "/images/portfolio-1.jpg",
-      category: "ecommerce",
-      tags: ["Next.js", "Tailwind CSS", "Stripe"],
       liveUrl: "https://ecommerce-water-bottle-template-mai.vercel.app/",
-    },
-    {
-      title: "Website Institucional para Consultoria",
-      description:
-        "Criação de um site elegante e informativo para uma consultoria de negócios, focado em apresentar serviços e captar clientes.",
-      image: "/images/portfolio-2.jpg",
-      category: "website",
-      tags: ["React", "Styled Components", "Node.js"],
-      liveUrl: "https://consultoria-template-main.vercel.app/",
-    },
-    {
-      title: "Landing Page para Evento de Tecnologia",
-      description:
-        "Desenvolvimento de uma landing page de alta conversão para um evento de tecnologia, com formulário de inscrição e countdown.",
-      image: "/images/portfolio-3.jpg",
-      category: "landing",
-      tags: ["HTML", "CSS", "JavaScript"],
-      liveUrl: "https://landing-page-evento-template-main.vercel.app/",
-    },
-    {
-      title: "Plataforma de Gerenciamento de Projetos",
-      description:
-        "Construção de uma plataforma web robusta para gerenciamento de projetos, com dashboards interativos e controle de tarefas.",
-      image: "/images/portfolio-4.jpg",
-      category: "website",
-      tags: ["Next.js", "TypeScript", "GraphQL"],
-      liveUrl: "https://gerenciamento-projetos-template-main.vercel.app/",
-    },
-    {
-      title: "Landing Page de Produto Digital",
-      description:
-        "Criação de uma landing page otimizada para venda de curso online, com design persuasivo e alta taxa de conversão.",
-      image: "/images/portfolio-5.jpg",
-      category: "landing",
-      tags: ["WordPress", "Elementor", "SEO"],
-      liveUrl: "https://landing-produto-digital-template.vercel.app/",
-    },
-    {
-      title: "E-commerce de Roupas Esportivas",
-      description:
-        "Desenvolvimento de uma loja virtual completa para venda de roupas esportivas, com sistema de carrinho e checkout seguro.",
-      image: "/images/portfolio-6.jpg",
       category: "ecommerce",
-      tags: ["Vue.js", "Firebase", "API REST"],
-      liveUrl: "https://ecommerce-roupas-esportivas-template.vercel.app/",
+    },
+    {
+      title: "AURA - Landing Page de Skincare",
+      liveUrl: "https://skincare-template.vercel.app/",
+      category: "landing",
+    },
+    {
+      title: "Landing Page SaaS Moderna",
+      liveUrl: "https://landing-page-saas-template.vercel.app/",
+      category: "landing",
+    },
+    {
+      title: "Travel Journal - Diário de Viagem",
+      liveUrl: "https://www.traveljournal.me/pt",
+      category: "website",
+    },
+    {
+      title: "AQUAFlow - Garrafa Inteligente",
+      liveUrl: "https://water-bottle-template.vercel.app/",
+      category: "landing",
+    },
+    {
+      title: "E-commerce de Skincare Premium",
+      liveUrl: "https://ecommerce-skincare-template.vercel.app/",
+      category: "ecommerce",
+    },
+    {
+      title: "Landing Page de Headphones Premium",
+      liveUrl: "https://nextjs-product-landing.vercel.app/",
+      category: "landing",
+    },
+    {
+      title: "Paws & Purpose - Adoção de Cães",
+      liveUrl: "https://paws-and-purpose.vercel.app/",
+      category: "website",
+    },
+    {
+      title: "PurificAR - Realidade Aumentada",
+      liveUrl:
+        "https://purific-ar-git-master-gabriellamsas-projects.vercel.app/",
+      category: "website",
     },
   ];
 
@@ -86,17 +76,8 @@ export default function PortfolioPage() {
       ? projects
       : projects.filter((project) => project.category === selectedCategory);
 
-  const projectsJsonLd = portfolioProjectsData.map((project) =>
-    generateProjectJsonLd(project)
-  );
-  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
-    { name: "Início", url: "https://webluma.com" },
-    { name: "Portfólio", url: "https://webluma.com/portfolio" },
-  ]);
-
   return (
     <div className="min-h-screen bg-white">
-      <JsonLd data={[...projectsJsonLd, breadcrumbJsonLd]} />
       <Navbar />
       <div className="pt-32 pb-12">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -112,8 +93,7 @@ export default function PortfolioPage() {
               Meu Portfólio
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Uma seleção dos meus melhores trabalhos, demonstrando paixão por
-              design e desenvolvimento
+              Demonstrações ao vivo dos meus melhores trabalhos
             </p>
           </div>
 
@@ -155,61 +135,11 @@ export default function PortfolioPage() {
                     : "translate-y-20 opacity-0"
                 }`}
               >
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden group">
-                  <div className="relative">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                    {/* Category Badge */}
-                    <div className="absolute top-4 left-4">
-                      <span
-                        className={`px-3 py-1 rounded-full text-xs font-medium ${
-                          project.category === "ecommerce"
-                            ? "bg-green-100 text-green-800"
-                            : project.category === "landing"
-                            ? "bg-blue-100 text-blue-800"
-                            : "bg-purple-100 text-purple-800"
-                        }`}
-                      >
-                        {project.category === "ecommerce"
-                          ? "E-commerce"
-                          : project.category === "landing"
-                          ? "Landing Page"
-                          : "Website"}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-medium text-black mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm mb-4">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.tags.map((tag, tagIndex) => (
-                        <span
-                          key={tagIndex}
-                          className="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <Link
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-600 hover:text-blue-800 text-sm font-medium transition-colors duration-300"
-                      >
-                        Ver Projeto
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                <DemoLive
+                  url={project.liveUrl}
+                  title={project.title}
+                  className="h-80"
+                />
               </div>
             ))}
           </div>

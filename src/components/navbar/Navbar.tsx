@@ -58,6 +58,8 @@ export default function Navbar() {
                 src="/wb-logo.png"
                 alt="webluma logo"
                 fill
+                sizes="(max-width: 640px) 32px, 40px"
+                priority
                 className="object-contain"
               />
             </div>
@@ -127,14 +129,6 @@ export default function Navbar() {
               }`}
             >
               Portfólio
-            </Link>
-            <Link
-              href="/equipe"
-              className={`text-sm font-medium transition-colors duration-300 hover:opacity-70 ${
-                shouldShowWhiteBackground ? "text-black" : "text-white"
-              }`}
-            >
-              Equipe
             </Link>
             <Link
               href={
@@ -249,13 +243,6 @@ export default function Navbar() {
                 className="block text-black font-medium hover:text-gray-600 transition-colors duration-300"
               >
                 Portfólio
-              </Link>
-              <Link
-                href="/equipe"
-                onClick={closeMobileMenu}
-                className="block text-black font-medium hover:text-gray-600 transition-colors duration-300"
-              >
-                Equipe
               </Link>
               <Link
                 href={
